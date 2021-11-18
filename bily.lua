@@ -10354,23 +10354,23 @@ if SecondSudo(msg) then
 if text == 'تحديث المتجر' then 
 io.popen("mkdir Files")
 os.execute("rm -fr Files/*")
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/AddedMe.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/AutoFile.lua")  
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangeName.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangePhoto.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangeUser.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/MuteNames.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ProNames.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ReplyBot.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/TagAdmins.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/TagAll.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/AddedMe.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/AutoFile.lua")  
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ChangeName.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ChangePhoto.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ChangeUser.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/MuteNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ProNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ReplyBot.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/TagAdmins.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/TagAll.lua") 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
 dofile('bily.lua') 
 end
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙جاري تحديث سورس بيلي', 1, 'md') 
 os.execute('rm -rf bily.lua') 
-os.execute('wget https://raw.githubusercontent.com/BiLYDeV/bily/main/bily.lua') 
+os.execute('wget https://raw.githubusercontent.com/BiLYDeV/bily/Billy/bily.lua') 
 dofile('bily.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
@@ -10398,7 +10398,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -10430,7 +10430,7 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/"..FileName)
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n⌁︙الملف ↫ *"..FileName.."*\n⌁︙تم تعطيله وحذفه من البوت بنجاح") 
@@ -10442,7 +10442,7 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/"..FileName)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
