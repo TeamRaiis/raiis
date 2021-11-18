@@ -388,6 +388,20 @@ file:write(table.concat(respbody))
 file:close() 
 return file_path, code 
 end 
+function AddFileSource(msg,chat,ID_FILE,File_Name)
+if File_Name:match('.lua') then
+if File_Name ~= "bily.lua" then 
+send(chat,msg.id_," ⌁︙هذا الملف ليس تابع لسورس بيلي")
+return false 
+end      
+local File = json:decode(https.request('https://api.telegram.org/bot'..TokenBot..'/getfile?file_id='..ID_FILE) ) 
+os.execute('rm -rf bily.lua')
+download_to_file('https://api.telegram.org/file/bot'..TokenBot..'/'..File.result.file_path, ''..File_Name) 
+else
+send(chat,msg.id_,"⌁︙عذرا الملف ليس بصيغة ↫ Lua يرجى رفع الملف الصحيح")
+end      
+send(chat,msg.id_,"⌁︙تم رفع الملف الان ارسل تحديث ليتم تحديث الملف")
+end
 --     Source bily     --
 function AddFile(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.json') then
@@ -3209,6 +3223,16 @@ end
 end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end
+end
+if text == 'رفع ملف السورس' or text == 'رفع الملف' and Sudo(msg) and tonumber(msg.reply_to_message_id_) > 0 then   
+function by_reply(extra, result, success)   
+if result.content_.document_ then 
+local ID_FILE = result.content_.document_.document_.persistent_id_ 
+local File_Name = result.content_.document_.file_name_
+AddFileSource(msg,msg.chat_id_,ID_FILE,File_Name)
+end   
+end
+tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end
 --     Source bily     --
 if DevAbs:get(bily.."SET:GAME"..msg.chat_id_) then  
@@ -10327,6 +10351,22 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
 --     Source bily     --
 if SecondSudo(msg) then
+if text == 'تحديث المتجر' then 
+io.popen("mkdir Files")
+os.execute("rm -fr Files/*")
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/AddedMe.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/AutoFile.lua")  
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangeName.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangePhoto.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangeUser.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/MuteNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ProNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ReplyBot.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/TagAdmins.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/TagAll.lua") 
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
+dofile('bily.lua') 
+end
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙جاري تحديث سورس بيلي', 1, 'md') 
 os.execute('rm -rf bily.lua') 
