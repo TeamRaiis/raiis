@@ -4339,21 +4339,30 @@ if text == "ايدي المجموعه" and ChCheck(msg) then Dev_Abs(msg.chat_id
 if text == 'مسح سحكاتي' or text == 'مسح تعديلاتي' or text == 'حذف سحكاتي' or text == 'حذف تعديلاتي' then DevAbs:del(bily..'Abs:EditMsg'..msg.chat_id_..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم حذف جميع تعديلاتك بنجاح' , 1, 'md') end
 if text == 'مسح جهاتي' or text == 'مسح اضافاتي' or text == 'حذف جهاتي' or text == 'حذف اضافاتي' then DevAbs:del(bily..'Abs:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم حذف جميع جهاتك المضافه' , 1, 'md') end
 --     Source bily     --
-if text == "المطور" then 
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(bily.."Abs:ChId"))
+if text == "المطور" or text == "مطور" or text == "↫ المطور ✯" then
+local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
 local GetInfo = JSON.decode(Check)
 local DevCh1 = GetInfo.result.username
-local DevText = DevAbs:get(bily.."DevText")
-if DevAbs:get(bily.."Abs:ChId") then DevCh = '\n⌁︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
-tdcli_function({ID="GetUser",user_id_=DevId},function(arg,dp) 
-if dp.username_ ~= false then DevUser = '@'..dp.username_ else DevUser = dp.first_name_ end
+local DevText = DevAbs:get(WaTaN2.."DevText")
+if DevAbs:get(WaTaN2.."Abs:ChId") then DevCh = '\n✯︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
 if DevText then
-Dev_Abs(msg.chat_id_, msg.id_, 1, DevText, 1, "md")
+Dev_Abs(msg.chat_id_, msg.id_,DevText)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙*Dev User* ↬ ['..DevUser..']\n⌁︙*Dev Id* ↬ '..DevId..DevCh, 1, "md")
+tdcli_function({ID="GetUser",user_id_=DevId},function(arg,result)
+tdcli_function({ID = "GetUserProfilePhotos",user_id_=DevId,offset_=0,limit_ = 1},function(arg,getpro) 
+if getpro.photos_[0] then
+Text = "*✯︙Dev Name ↬ * ["..result.first_name_.."](t.me/"..result.username_..")\n*✯︙Dev User ↬* [@"..result.username_.."]\n*✯︙Dev Ch ↬* [@"..DevCh1.."]"
+keyboard = {}
+keyboard.inline_keyboard = {{{text=''..result.first_name_..'',url="https://t.me/"..result.username_..""}}}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&caption='..URL.escape(Text)..'&photo='..getpro.photos_[0].sizes_[1].photo_.persistent_id_..'&reply_to_message_id='..msg_id..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+else
+Dev_Abs(msg.chat_id_, msg.id_, 1, '✯︙*Dev User* ↬ ['..DevUser..']\n✯︙*Dev Id* ↬ '..DevId..DevCh, 1, "md")
 end
-end,nil)
-end 
+end,nil)   
+end,nil)   
+end
+end
 --     Source bily     --
 if text and text:match('^هينه @(.*)') and ChCheck(msg) or text and text:match('^هينها @(.*)') then 
 if not DevAbs:get(bily..'Abs:Lock:Stupid'..msg.chat_id_) then
