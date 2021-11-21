@@ -4188,7 +4188,7 @@ Welcome To Source
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙[Source Channel](https://t.me/XBBBBS)
 
-⌁︙[Exp Source](https://t.me/XJJJJS)
+⌁︙[Exp Source](https://t.me/TAJ0R)
 
 ⌁︙[Developer](https://t.me/X_6_Z)
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
@@ -4340,11 +4340,11 @@ if text == 'مسح سحكاتي' or text == 'مسح تعديلاتي' or text ==
 if text == 'مسح جهاتي' or text == 'مسح اضافاتي' or text == 'حذف جهاتي' or text == 'حذف اضافاتي' then DevAbs:del(bily..'Abs:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم حذف جميع جهاتك المضافه' , 1, 'md') end
 --     Source bily     --
 if text == "المطور" or text == "مطور" or text == "↫ المطور ✯" then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
+local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(bily.."Abs:ChId"))
 local GetInfo = JSON.decode(Check)
 local DevCh1 = GetInfo.result.username
-local DevText = DevAbs:get(WaTaN2.."DevText")
-if DevAbs:get(WaTaN2.."Abs:ChId") then DevCh = '\n✯︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
+local DevText = DevAbs:get(bily.."DevText")
+if DevAbs:get(bily.."Abs:ChId") then DevCh = '\n✯︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
 if DevText then
 Dev_Abs(msg.chat_id_, msg.id_,DevText)
 else
@@ -10363,23 +10363,23 @@ if SecondSudo(msg) then
 if text == 'تحديث المتجر' then 
 io.popen("mkdir Files")
 os.execute("rm -fr Files/*")
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/AddedMe.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/AutoFile.lua")  
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ChangeName.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ChangePhoto.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ChangeUser.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/MuteNames.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ProNames.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/ReplyBot.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/TagAdmins.lua") 
-io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/TagAll.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/AddedMe.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/AutoFile.lua")  
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangeName.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangePhoto.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ChangeUser.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/MuteNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ProNames.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/ReplyBot.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/TagAdmins.lua") 
+io.popen("cd Files && wget https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/TagAll.lua") 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم تحديث المتجر الى الاصدار الجديد', 1, 'md') 
 dofile('bily.lua') 
 end
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙جاري تحديث سورس بيلي', 1, 'md') 
 os.execute('rm -rf bily.lua') 
-os.execute('wget https://raw.githubusercontent.com/BiLYDeV/bily/Billy/bily.lua') 
+os.execute('wget https://raw.githubusercontent.com/BiLYDeV/bily/main/bily.lua') 
 dofile('bily.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
@@ -10407,7 +10407,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
@@ -10439,7 +10439,7 @@ end
 if text and text:match("^(تعطيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تعطيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/"..FileName)
 if Res == 200 then
 os.execute("rm -fr Files/"..FileName)
 send(msg.chat_id_, msg.id_,"\n⌁︙الملف ↫ *"..FileName.."*\n⌁︙تم تعطيله وحذفه من البوت بنجاح") 
@@ -10451,7 +10451,7 @@ end
 if text and text:match("^(تفعيل ملف) (.*)(.lua)$") then
 local FileGet = {string.match(text, "^(تفعيل ملف) (.*)(.lua)$")}
 local FileName = FileGet[2]..'.lua'
-local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/Billy/bilyFiles/"..FileName)
+local GetJson, Res = https.request("https://raw.githubusercontent.com/BiLYDeV/bilyFiles/main/bilyFiles/"..FileName)
 if Res == 200 then
 local ChekAuto = io.open("Files/"..FileName,'w+')
 ChekAuto:write(GetJson)
