@@ -4181,20 +4181,16 @@ DevAbs:set(bily..'Abs:viewget'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
 --     Source bily     --
-if text == "السورس" or text == "سورس" then 
-local text =  [[
+if text == "سورس" and ChCheck(msg) or text == "السورس" and ChCheck(msg) or text == "يا سورس" and ChCheck(msg) or text == "ياسورس" and ChCheck(msg) or text == "↫  السورس ⌁" and ChCheck(msg) then
+Text = [[
 Welcome To Source
-⌁︙bily TEAM
-┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Source Channel](https://t.me/XBBBBS)
-
-⌁︙[Exp Source](https://t.me/TAJ0R)
-
-⌁︙[Developer](https://t.me/X_6_Z)
-┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-⌁︙[Tws bily](https://t.me/LH1BOT)
+⌁︙[bily TeaM](https://t.me/XBBBBS)
 ]]
-Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
+keyboard = {} 
+keyboard.inline_keyboard = {{{text = '⌁ Source Channel',url="https://t.me/XBBBBS"}},{{text = '⌁ Developer',url="t.me/X_6_Z"},{text = '⌁ Tws bily',url="https://t.me/LH1BOT"}},{{text= '⌁ Exp Source .',url="https://t.me/XJJJJS"}}}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/WaTaNTeaM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
 end
 --     Source bily     --
 if ChatType == 'sp' or ChatType == 'gp'  then
@@ -4340,11 +4336,11 @@ if text == 'مسح سحكاتي' or text == 'مسح تعديلاتي' or text ==
 if text == 'مسح جهاتي' or text == 'مسح اضافاتي' or text == 'حذف جهاتي' or text == 'حذف اضافاتي' then DevAbs:del(bily..'Abs:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '⌁︙تم حذف جميع جهاتك المضافه' , 1, 'md') end
 --     Source bily     --
 if text == "المطور" or text == "مطور" or text == "↫ المطور ✯" then
-local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(WaTaN2.."Abs:ChId"))
+local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(bily.."Abs:ChId"))
 local GetInfo = JSON.decode(Check)
 local DevCh1 = GetInfo.result.username
-local DevText = DevAbs:get(WaTaN2.."DevText")
-if DevAbs:get(WaTaN2.."Abs:ChId") then DevCh = '\n✯︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
+local DevText = DevAbs:get(bily.."DevText")
+if DevAbs:get(bily.."Abs:ChId") then DevCh = '\n✯︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
 if DevText then
 Dev_Abs(msg.chat_id_, msg.id_,DevText)
 else
