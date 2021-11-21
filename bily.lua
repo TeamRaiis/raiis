@@ -4188,7 +4188,7 @@ Welcome To Source
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
 ⌁︙[Source Channel](https://t.me/XBBBBS)
 
-⌁︙[Exp Source](https://t.me/TAJ0R)
+⌁︙[Exp Source](https://t.me/XJJJJS)
 
 ⌁︙[Developer](https://t.me/X_6_Z)
 ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
