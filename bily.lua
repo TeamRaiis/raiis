@@ -4189,7 +4189,7 @@ Welcome To Source
 keyboard = {} 
 keyboard.inline_keyboard = {{{text = '⌁ Source Channel',url="https://t.me/XBBBBS"}},{{text = '⌁ Developer',url="t.me/X_6_Z"},{text = '⌁ Tws bily',url="https://t.me/LH1BOT"}},{{text= '⌁ Exp Source .',url="https://t.me/XJJJJS"}}}
 local msg_id = msg.id_/2097152/0.5
-https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/WaTaNTeaM&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/XBBBBS&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
 --     Source bily     --
