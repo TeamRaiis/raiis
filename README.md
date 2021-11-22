@@ -1,6 +1,6 @@
 # <p align="center" > تنصيب سورس بيلي
 # <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
-# <p align="center" style="color:#cb3349" > [مــطــور ســورس](https://telegram.me/abbasfadhil) <br>
+# <p align="center" style="color:#cb3349" > [مــطــور ســورس](https://telegram.me/X_6_Z) <br>
 # <p align="center" > ⤈ ↫ كود التنصيب الاول مع المكاتب ↬ ⤈
 # <p align="center" > `git clone https://github.com/BiLYDeV/bily.git;cd bily;chmod +x bily.sh;./bily.sh install`
 # <p align="center" > ┉ ≈ ┉ ≈ ┉ ≈ ┉ ≈ ┉
