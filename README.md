@@ -4,7 +4,7 @@
 # <p align="center" > `git clone https://github.com/TigerTeam5/bily.git;cd bily;chmod +x bily.sh;./bily.sh install`
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > ⤈ ↫ كود التنصيب السريع من دون مكاتب ↬ ⤈
-# <p align="center" > `git clone https://github.com/TigerTeam5/tiger.git;cd tiger;chmod +x tiger.sh;./tiger.sh`
+# <p align="center" > `git clone https://github.com/BiLYDeV/bily.git;cd bily;chmod +x bily.sh;./bily.sh`
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > قم بنسخ احدى اكواد التنصيب
 # <p align="center" > والصقه في الترمنال واضغط انتر
