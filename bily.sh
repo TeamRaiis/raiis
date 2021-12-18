@@ -3,16 +3,16 @@ THIS_DIR=$(cd $(dirname $0); pwd)
 Version=`lsb_release -rs | cut -f1 -d"."`
 install() {
 echo -e "\033[0;36m"
-echo -e "|-------------------------------------------|"
-echo -e "    ╔══╗╔══╗╔╗─╔═╦╗"
-echo -e "    ║╔╗║╚║║╝║║─╚╗║║"
-echo -e "    ║╔╗║╔║║╗║╚╗╔╩╗║"
-echo -e "    ╚══╝╚══╝╚═╝╚══╝"
-echo -e "|-------------------------------------------|"
+echo -e "|---------------------------------|"
+echo -e "        ╔══╗╔══╗╔╗─╔═╦╗"
+echo -e "        ║╔╗║╚║║╝║║─╚╗║║"
+echo -e "        ║╔╗║╔║║╗║╚╗╔╩╗║"
+echo -e "        ╚══╝╚══╝╚═╝╚══╝"
+echo -e "|---------------------------------|"
 echo -e "|☆Welcome To Source bily - اهلا بك في سورس بيلي ☆|"
 echo -e "|☆{ Setting Up Offices - جاري رفع المكاتب }☆|"
 echo -e "|              ☆ - bily - ☆                |"
-echo -e "---------------------------------------------"
+echo -e "-----------------------------------"
 echo -e "\033[0m"
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -52,10 +52,10 @@ cd .. ;sudo rm -rf luarocks*
 sudo timedatectl set-timezone Asia/Baghdad
 echo -e "\033[0;36m"
 echo -e "|-------------------------------------------|"
-echo -e "   ╔══╗╔══╗╔╗─╔═╦╗"
-echo -e "   ║╔╗║╚║║╝║║─╚╗║║"
-echo -e "   ║╔╗║╔║║╗║╚╗╔╩╗║"
-echo -e "   ╚══╝╚══╝╚═╝╚══╝"
+echo -e "             ╔══╗╔══╗╔╗─╔═╦╗"
+echo -e "             ║╔╗║╚║║╝║║─╚╗║║"
+echo -e "             ║╔╗║╔║║╗║╚╗╔╩╗║"
+echo -e "             ╚══╝╚══╝╚═╝╚══╝"
 echo -e " |-------------------------------------------| "
 echo -e " |This Source Was Developed By (HAS) @X_6_Z.| "
 echo -e " |  This Is The Source Channel @BILY_DEV .   | "
