@@ -1,7 +1,7 @@
 # <p align="center" > تنصيب سورس بيلي
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > ⤈ ↫ كود التنصيب الاول مع المكاتب ↬ ⤈
-# <p align="center" > `git clone https://github.com/TigerTeam5/bily.git;cd bily;chmod +x bily.sh;./bily.sh install`
+# <p align="center" > `git clone https://github.com/BiLYDeV/bily.git;cd bily;chmod +x bily.sh;./bily.sh install`
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > ⤈ ↫ كود التنصيب السريع من دون مكاتب ↬ ⤈
 # <p align="center" > `git clone https://github.com/BiLYDeV/bily.git;cd bily;chmod +x bily.sh;./bily.sh`
@@ -14,13 +14,13 @@
 # <p align="center" > ومبروك عليك تنصيب السورس
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > ⤈ ↫ كود الرن ↬ ⤈
-# <p align="center" > `./tiger/Run`
+# <p align="center" > `./bily/Run`
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > ⤈ ↫ كود حذف التنصيب ↬ ⤈
-# <p align="center" > `rm -rf tiger`
+# <p align="center" > `rm -rf bily`
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > ⤈ ↫ كود تغير ايدي المطور الاساسي وتوكن البوت ↬ ⤈
-# <p align="center" > `cd tiger;rm -rf config.lua;./Run`
+# <p align="center" > `cd bily;rm -rf config.lua;./Run`
 # <p align="center" > ※┉ ┉ ┉ ┉ ┉ ┉ ┉ ┉※
 # <p align="center" > [Source Ch](https://t.me/BILY_DEV) • [قناة السورس](https://t.me/BILY_DEV)
 # <p align="center" > [Exp Source](https://t.me/Exp_Dev) • [شروحات السورس](https://t.me/XJJJJS)
